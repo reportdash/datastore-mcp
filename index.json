@@ -1,0 +1,32 @@
+{
+  "name": "datastore",
+  "displayName": "Datastore by ReportDash",
+  "description": "Connect to ReportDash Datastore for instant access to your marketing analytics, reports, and insights from Facebook Ads, Google Ads, and more",
+  "homepage": "https://datastore.reportdash.com",
+  "repository": "https://github.com/reportdash/datastore-mcp",
+  "license": "MIT",
+  "publisher": "ReportDash",
+  "icon": "https://storage.googleapis.com/datastore-reportdash/logo/squared_icon_yellow.png",
+  "categories": [
+    "data",
+    "analytics",
+    "business",
+    "marketing"
+  ],
+  "connection": {
+    "type": "sse",
+    "baseUrl": "https://datastore.reportdash.com/api/mcp/v1"
+  },
+  "authentication": {
+    "type": "apiKey",
+    "required": true,
+    "instructions": "1. Log in to https://datastore.reportdash.com\n2. Go to Destinations → API Access\n3. Generate and copy your API key"
+  },
+  "configuration": {
+    "url": "https://datastore.reportdash.com/api/mcp/v1",
+    "transport": "sse",
+    "headers": {
+      "X-Api-Key": "${DATASTORE_API_KEY}"
+    }
+  }
+}
