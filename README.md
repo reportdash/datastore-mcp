@@ -30,11 +30,11 @@ The Datastore Datastore MCP (Model Context Protocol) server provides a standardi
 
 ### Configuration
 
-The Datastore MCP server uses Server-Sent Events (SSE) transport over HTTPS.
+The Datastore MCP server uses HTTPS.
 
 **Connection Details:**
 - **Base URL**: `https://datastore.reportdash.com/api/mcp/v1`
-- **Transport**: SSE
+- **Transport**: HTTPS
 - **Authentication**: API Key via custom header
 
 **Configuration for MCP Clients:**
@@ -44,7 +44,7 @@ The Datastore MCP server uses Server-Sent Events (SSE) transport over HTTPS.
   "mcpServers": {
     "datastore": {
       "url": "https://datastore.reportdash.com/api/mcp/v1",
-      "transport": "sse",
+      "transport": "streamable-http",
       "headers": {
         "X-Api-Key": "your-api-key-here"
       }
